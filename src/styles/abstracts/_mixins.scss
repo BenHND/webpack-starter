@@ -1,0 +1,31 @@
+/**
+  RESPONSIVE BREAKPOINTS
+**/
+
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$widescreen: 1200px;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint=="mobile" {
+    @media (min-width:#{$mobile}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="tablet" {
+    @media (min-width:#{$tablet}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="desktop" {
+    @media (min-width: #{$desktop}) {
+      @content;
+    }
+  }
+  @else if $breakpoint=="widescreen" {
+    @media (min-width: #{$widescreen}) {
+      @content;
+    }
+  }
+}
